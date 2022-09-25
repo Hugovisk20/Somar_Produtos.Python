@@ -1,6 +1,6 @@
 from tkinter import *
 limite = 0
-#funções
+#FUNÇÕES PARA CADA BOTÃO
 def cima1():
     a=int(num1["text"])
     num1["text"] = str(a + 1)
@@ -433,8 +433,7 @@ def baixo48():
     if a<=limite:
         a=limite + 1
     num48["text"] = str(a - 1)
-
-
+#FUNÇÃO PARA SOMAR OS VALORES DAS ENTRADAS
 def somar():
     s1 = Bife_ancho * int(num1["text"]) + Picanha * int(num2["text"]) + Alcatra * int(num3["text"]) + Medalhao_Carne * int(num4["text"]) + Medalhao_Frango * int(num5["text"]) + Coração * int(num6["text"]) + Tulipa * int(num7["text"]) + Linguiça_Artesanal * int(num8["text"]) + Panceta * int(num9["text"])
     lbl_res_churrasco["text"] = s1
@@ -461,14 +460,14 @@ def somar():
     lbl_tudo["text"] = s_total
 
 
-#janela
+#JANELA
 janela =Tk()
 bg = PhotoImage(file= "C://Users/hugot/OneDrive/Imagens/Saved Pictures/chu_T_pronto.png")
 lblPng = Label(janela, image=bg)
 lblPng.place(x=0, y=0)
 janela.geometry("920x600")
 janela.title("Somar os Preços")
-#labels de exebição
+#LABELS DE EXIBIÇÃO DOS RESULTADOS E TEXTOS
 lbl_res_churrasco = Label(janela, text="", background="#FFFFFF")
 lbl_res_churrasco.place(x=331, y=450)
 lbl_res_churrascoP = Label(janela, text="Preço de churrasco:", font="arial 10", background="#FFFFFF")
@@ -509,7 +508,7 @@ lbl_tudo.place(x=576, y=540)
 lbl_tudoT = Label(janela, text="Total:", font="arial 10", background="#FFFFFF")
 lbl_tudoT.place(x=395, y=540)
 
-#Labels de churrasco
+#LABELS DA COLUNA CHURRASCO
 lbl_porçõesChurrasco = Label(janela, text="PORÇÕES DE CHURRASCO", font="arial 10", background="#FFFFFF")
 lbl_porçõesChurrasco.place(x=22, y=20)
 lbl1 = Label(janela, text="Bife Ancho:", font="Arial 10", background="#FFFFFF")
@@ -530,7 +529,7 @@ lbl8 = Label(janela, text="Linguiça artesanal:", font="arial 10", background="#
 lbl8.place(x=22, y=260)
 lbl9 = Label(janela, text="Panceta:", font="arial 10", background="#FFFFFF")
 lbl9.place(x=22, y=290)
-#Labels de bebidas
+#LABLES DA COLUNA BEBIDAS
 lbl_beidas = Label(janela, text="BEBIDAS", font="arial 10", background="#FFFFFF")
 lbl_beidas.place(x=215, y=20)
 lbl10 = Label(janela, text="Refri 350Ml:", font="arial 10", background="#FFFFFF")
@@ -557,7 +556,7 @@ lbl20 = Label(janela, text="Água:", font="arial 10", background="#FFFFFF")
 lbl20.place(x=213, y=350)
 lbl21 = Label(janela, text="Água com gás:", font="arial 10", background="#FFFFFF")
 lbl21.place(x=213, y=380)
-#labels de espetos
+#LABELS DA COLUNA ESPETOS
 lbl_espetos = Label(janela, text="ESPETOS", font="arial 10", background="#FFFFFF")
 lbl_espetos.place(x=416, y=20)
 lbl22 = Label(janela, text="Frango:", font="arial 10", background="#FFFFFF")
@@ -576,7 +575,7 @@ lbl28 = Label(janela, text="Medalhão frango:", font="arial 10", background="#FF
 lbl28.place(x=414, y=230)
 lbl29 = Label(janela, text="medalhão carne:", font="arial 10", background="#FFFFFF")
 lbl29.place(x=414, y=260)
-#labels de porções
+#LABELS DA COLUNA PORÇÕES
 lbl_porções = Label(janela, text="PORÇOES", font="arial 10", background="#FFFFFF")
 lbl_porções.place(x=575, y=20)
 lbl30 = Label(janela, text="Fritas:", font="arial 10", background="#FFFFFF")
@@ -593,8 +592,8 @@ lbl35 = Label(janela, text="Bolinho de cupim:", font="arial 10", background="#FF
 lbl35.place(x=572, y=200)
 lbl36 = Label(janela, text="Frango com queijo:", font="arial 10", background="#FFFFFF")
 lbl36.place(x=572, y=230)
-#labels de hamburgers
-    #labels bovino
+#LABELS DA COLUNA HAMBÚRGUER
+    #LABELS DE HAMBÚEGUERES
 lbl_B_Ham = Label(janela, text="BURGUER BOVINO", font="arial 10", background="#FFFFFF")
 lbl_B_Ham.place(x=765, y=20)
 lbl37 = Label(janela, text="X-Burguer:", font="arial 10", background="#FFFFFF")
@@ -605,7 +604,7 @@ lbl39 = Label(janela, text="X-Bacon:", font="arial 10", background="#FFFFFF")
 lbl39.place(x=763, y=110)
 lbl40 = Label(janela, text="X-Calabresa:", font="arial 10", background="#FFFFFF")
 lbl40.place(x=763, y=140)
-    #labels suino
+    #LABELS DE HAMBÚRGUERES SUINOS
 lbl_S_Ham = Label(janela, text="BURGUER SUINO", font="arial 10", background="#FFFFFF")
 lbl_S_Ham.place(x=765, y=175)
 lbl41 = Label(janela, text="X-Burguer:", font="arial 10", background="#FFFFFF")
@@ -616,7 +615,7 @@ lbl43 = Label(janela, text="X-Bacon:", font="arial 10", background="#FFFFFF")
 lbl43.place(x=763, y=260)
 lbl44 = Label(janela, text="X-Calabresa:", font="arial 10", background="#FFFFFF")
 lbl44.place(x=763, y=290)
-    #labels frango
+    #LABELS DE HABÚRGUERES DE FRANGO
 lbl45 = Label(janela, text="X-Burguer:", font="arial 10", background="#FFFFFF")
 lbl45.place(x=763, y=350)
 lbl46 = Label(janela, text="X-Salada:", font="arial 10", background="#FFFFFF")
@@ -625,7 +624,7 @@ lbl47 = Label(janela, text="X-Bacon:", font="arial 10", background="#FFFFFF")
 lbl47.place(x=763, y=410)
 lbl48 = Label(janela, text="X-Calabresa:", font="arial 10", background="#FFFFFF")
 lbl48.place(x=763, y=440)
-
+#EXIBE A QUANTIDADE DE PRODUTOS DOS ITENS DA COLUNA CHURRASCO
 num1 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num1.place(x=170, y=50)
 num2 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
@@ -644,7 +643,7 @@ num8 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num8.place(x=170, y=260)
 num9 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num9.place(x=170, y=290)
-
+#EXIBE A QUANTIDADE DE PRODUTOS DOS ITENS DA COLUNA BEBIDAS
 num10 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num10.place(x=370, y=50)
 num11 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
@@ -669,7 +668,7 @@ num20 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num20.place(x=370, y=350)
 num21 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num21.place(x=370, y=380)
-
+#EXIBE A QUANTIDADE DE PRODUTOS DOS ITENS DA COLUNA ESPETOS
 num22 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num22.place(x=530, y=50)
 num23 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
@@ -686,7 +685,7 @@ num28 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num28.place(x=530, y=230)
 num29 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num29.place(x=530, y=260)
-
+#EXIBE A QUANTIDADE DE PRODUTOS DOS ITENS DA COLUNA PORÇÕES
 num30 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num30.place(x=720, y=50)
 num31 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
@@ -701,7 +700,7 @@ num35 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num35.place(x=720, y=200)
 num36 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num36.place(x=720, y=230)
-
+#EXIBE A QUANTIDADE DE PRODUTOS DOS ITENS DA COLUNA HAMBÚRGUER
 num37 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num37.place(x=860, y=50)
 num38 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
@@ -727,10 +726,10 @@ num47.place(x=860, y=410)
 num48 = Label(janela, text="0", font="arial 10", background="#FFFFFF")
 num48.place(x=860, y=440)
 
-#botões
+#BOTÃO PARA SOMAR TODOS OS VALORES
 btnsoma = Button(janela, text="SOME", command=somar, bg="#FFFFFF", bd=0, fg="#000000")
 btnsoma.place(x=43, y=459, width=100)
-
+#BOTÕES PARA AUMENTAR OU DIMINUIR UMA UNIDADE DE CADA ITEM DA COLUNA CHURRASCO
 btn1 = Button(janela, text="-", command=baixo1, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
 btn1.place(x=150, y=50, width=20, height=20)
 btn1e = Button(janela, text="+", command=cima1, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
@@ -767,7 +766,7 @@ btn9 = Button(janela, text="-", command=baixo9, bg="#bc0000", bd=1, fg="#FFFFFF"
 btn9.place(x=150, y=290, width=20, height=20)
 btn9e = Button(janela, text="+", command=cima9, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
 btn9e.place(x=185, y=290, width=20, height=20)
-
+#BOTÕES PARA AUMENTAR OU DIMINUIR UMA UNIDADE DE CADA ITEM DA COLUNA BEBIDAS
 btn10 = Button(janela, text="-", command=baixo10, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
 btn10.place(x=350, y=50, width=20, height=20)
 btn10e = Button(janela, text="+", command=cima10, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
@@ -816,7 +815,7 @@ btn21 = Button(janela, text="-", command=baixo21, bg="#bc0000", bd=1, fg="#FFFFF
 btn21.place(x=350, y=380, width=20, height=20)
 btn21e = Button(janela, text="+", command=cima21, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
 btn21e.place(x=385, y=380, width=20, height=20)
-
+#BOTÕES PARA AUMENTAR OU DIMINUIR UMA UNIDADE DE CADA ITEM DA COLUNA ESPETOS
 btn22 = Button(janela, text="-", command=baixo22, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
 btn22.place(x=510, y=50, width=20, height=20)
 btn22e = Button(janela, text="+", command=cima22, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
@@ -849,7 +848,7 @@ btn29 = Button(janela, text="-", command=baixo29, bg="#bc0000", bd=1, fg="#FFFFF
 btn29.place(x=510, y=260, width=20, height=20)
 btn29e = Button(janela, text="+", command=cima29, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
 btn29e.place(x=545, y=260, width=20, height=20)
-
+#BOTÕES PARA AUMENTAR OU DIMINUIR UMA UNIDADE DE CADA ITEM DA COLUNA PORÇÕES
 btn30 = Button(janela, text="-", command=baixo30, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
 btn30.place(x=700, y=50, width=20, height=20)
 btn30e = Button(janela, text="+", command=cima30, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
@@ -878,7 +877,7 @@ btn36 = Button(janela, text="-", command=baixo36, bg="#bc0000", bd=1, fg="#FFFFF
 btn36.place(x=700, y=230, width=20, height=20)
 btn36e = Button(janela, text="+", command=cima36, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
 btn36e.place(x=735, y=230, width=20, height=20)
-
+#BOTÕES PARA AUMENTAR OU DIMINUIR UMA UNIDADE DE CADA ITEM DA COLUNA HAMBÚRGUER
 btn37 = Button(janela, text="-", command=baixo37, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
 btn37.place(x=840, y=50, width=20, height=20)
 btn37e = Button(janela, text="+", command=cima37, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
@@ -928,7 +927,7 @@ btn48.place(x=840, y=440, width=20, height=20)
 btn48e = Button(janela, text="+", command=cima48, bg="#bc0000", bd=1, fg="#FFFFFF", activebackground="#810000")
 btn48e.place(x=875, y=440, width=20, height=20)
 
-#variaveis de churrasco
+#VARIAVEIS COM PREÇOS DOS PRODUTOS DA COLUNA CHURRASCO
 Bife_ancho = 60.00
 Picanha = 100.00
 Alcatra = 60.00
@@ -938,7 +937,7 @@ Coração = 55.00
 Tulipa = 55.00
 Linguiça_Artesanal = 55.00
 Panceta = 55.00
-#variaveis de bebidas
+#VARIAVEIS COM PREÇOS DOS PRODUTOS DA COLUNA BEBIDAS
 Refri = 5.00
 Suco_Natural = 10.00
 Suco_Integral = 15.00
@@ -951,7 +950,7 @@ Long_Neck = 8.00
 SmirnoffIce =12.00
 Agua = 3.00
 Agua_gas = 4.00
-#variaveis de espetos
+#VARIAVEIS COM PREÇOS DOS PRODUTOS DA COLUNA ESPETOS
 Frango_E = 5.00
 Alcatra_E = 6.00
 Panceta_E = 5.00
@@ -960,7 +959,7 @@ Queijo_coalho = 6.00
 Pao_de_alho = 5.00
 Medalhao_Frango_E = 7.00
 Medalhao_Carne_E = 8.00
-#variaveis de porções
+#VARIAVEIS COM PREÇOS DOS PRODUTOS DA COLUNA PORÇÕES
 Fritas = 30.00
 Batata_rustica = 35.00
 Mandioca = 35.00
@@ -968,7 +967,7 @@ Polenta = 30.00
 Carne_de_onça = 60.00
 Bolinho_de_cupim = 60.00
 Frango_com_queijo = 50.00
-#variaveis de hamburguers
+#VARIAVEIS COM PREÇOS DOS PRODUTOS DA COLUNA HAMBÚRGUER
 X_Burguer_bov = 15.00
 X_Salada_bov = 16.00
 X_Bacon_bov = 20.00
